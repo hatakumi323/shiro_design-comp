@@ -315,6 +315,10 @@ section {
 .info {
   text-align: left;
 }
+
+.swiper-container {
+  display: none;
+}
 /* END__Works */
 
 /* Florist */
@@ -475,14 +479,6 @@ td:first-child {
 
     /* sp_works */
     .work__contents {
-      display: block;
-    }
-
-    .work__contents__item {
-      max-width: 100%;
-    }
-
-    .work__contents__item:nth-child(3) {
-      margin-top: 0;
+      display: none;
     }
 }
