@@ -1,0 +1,71 @@
+.header {
+    position: relative;
+    width: 100%;
+    height: 620px;
+    background-image: url(../img/header-min.png);
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    &__nav {
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        height: 64px;
+    }
+    &__nav__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__nav__logo {
+        font-size: 36px;
+    }
+    .hamburger-menu {
+        position: relative;
+        width: 32px;
+        height: 64px;
+        cursor: pointer;
+        &__line,
+        &__line::before,
+        &__line::after {
+            position: absolute;
+            left: 0;
+            display: block;
+            width: 32px;
+            height: 1px;
+            background-color: #fff;
+        }
+        &__line::before,
+        &__line::after {
+            content: '';
+        }
+        &__line {
+            top: 50%;
+        }
+        &__line::before {
+            top: calc(50% - 8px);
+        }
+        &__line::after {
+            top: calc(50% + 8px);
+        }
+      }
+      &__title {
+          padding-top: 240px;
+          font-size: 120px;
+          font-weight: normal;
+      }
+      &__title__sub {
+          word-spacing: 4px;
+          &::before,
+          &::after {
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 2px;
+            margin: 0 8px;
+            background: #fff;
+            vertical-align: middle;
+          }
+      }
+}

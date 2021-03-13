@@ -1,8 +1,0 @@
-@charset "UTF-8";
-
-@media (max-width: 767px) {
-    .swiper-container{
-        width: 420px;
-        height: 400px;
-     }
-    }

@@ -1,0 +1,244 @@
+.concept {
+    width: 100%;
+    padding: 80px 0;
+    background: linear-gradient(#fff 70%, #ededed 30%);
+    &__image {
+        height: 400px;
+        object-fit: cover;
+    }
+    .u-heading {
+        position: relative;
+        margin-bottom: 32px;
+        padding-bottom: 24px;
+        font-size: 36px;
+        letter-spacing: 2px;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 40px;
+            height: 1px;
+            background-color: #2b2b2b;
+            transform: translateX(-50%);
+        }
+    }
+    .u-text {
+        padding-bottom: 40px;
+        line-height: 1.8;
+        letter-spacing: 1.4px;
+    }
+}
+
+.works {
+    padding-top: 80px;
+    &-heading {
+        position: relative;
+        margin-bottom: 32px;
+        padding-bottom: 24px;
+        font-size: 36px;
+        letter-spacing: 2px;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 40px;
+            height: 1px;
+            background-color: #2b2b2b;
+            transform: translateX(-50%);
+        }
+    }
+    &-text {
+        padding-bottom: 40px;
+        line-height: 1.8;
+        letter-spacing: 1.4px;
+    }
+    &__contents {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: space-between;
+        height: 1580px;
+    }
+    &__contents__item {
+       padding-bottom: 80px;
+        &:nth-of-type(3) {
+            padding-top: 120px;
+        }
+    }
+    .work-ttl {
+        font-weight: bold;
+        font-size: 24px;
+        text-align: left;
+        padding: 16px 0 4px;
+    }
+    .work-body {
+        font-size: 16px;
+        text-align: left;
+        line-height: 1.8;
+    }
+    }
+
+    .florist {
+        height: 650px;
+        background: linear-gradient(#ededed 50%,#fff 50%);
+            &-heading {
+                position: relative;
+                margin-bottom: 32px;
+                padding: 80px 0 24px;
+                font-size: 36px;
+                letter-spacing: 2px;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    width: 40px;
+                    height: 1px;
+                    background-color: #2b2b2b;
+                    transform: translateX(-50%);
+                }
+            }
+            &-text {
+                padding-bottom: 40px;
+                line-height: 1.8;
+                letter-spacing: 1.4px;
+            }
+            .card__items {
+                display: flex;
+                flex-wrap: wrap;
+              }
+              .card__item:not(:nth-child(3n + 1)) {
+                width: calc(33.3% - 24px * 2 / 3);
+                margin-left: 24px;
+              }
+            .card__title {
+                font-weight: bold;
+                text-align: left;
+                padding: 12px 0 4px;
+                font-size: 24px;
+            }
+            .introductory {
+                text-align: left;
+                letter-spacing: 3px;
+            }
+    }
+
+    .shop-information {
+        padding: 80px 0 120px;
+        &-heading {
+            position: relative;
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            font-size: 36px;
+            letter-spacing: 2px;
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 40px;
+                height: 1px;
+                background-color: #2b2b2b;
+                transform: translateX(-50%);
+            }
+        }
+        &-text {
+            padding-bottom: 40px;
+            line-height: 1.8;
+            letter-spacing: 1.4px;
+        }
+        &__grid {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &__img {
+            width: 50%;
+        }
+        &__table {
+            width: 45%;
+            border-spacing: 16px;
+            text-align: left;
+            letter-spacing: 1.5px;
+            line-height: 2;
+            &__heading {
+                border-right: 1px solid #a0a0a0;
+                width: 25%;
+            }
+        }
+        tbody {
+            vertical-align: inherit;
+        }
+        th ,td {
+            font-weight: normal;
+        }
+    }
+
+    .contact {
+        padding: 80px 0 100px;
+        background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),url('../img/contact_us-min.png');
+        background-size: cover;
+        &-heading {
+            position: relative;
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            font-size: 36px;
+            letter-spacing: 2px;
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 40px;
+                height: 1px;
+                background-color: #2b2b2b;
+                transform: translateX(-50%);
+            }
+        }
+        &-text {
+            padding-bottom: 40px;
+            line-height: 1.8;
+            letter-spacing: 1.4px;
+        }
+        &__btn {
+            position: relative;
+            display: inline-block;
+            width: 360px;
+            padding-left: 40px;
+            height: 80px;
+            line-height: 80px;
+            letter-spacing: 2px;
+            border: 1px solid #a0a0a0;
+            background: #fff;
+            font-size: 20px;
+            &:before,
+            &::after {
+              content: '';
+              position: absolute;
+              border-radius: 2px;
+            }
+            &:before {
+                top: 30px;
+                left: 85px;
+                width: 30px;
+                height: 20px;
+                border: 1px solid #2b2b2b;
+            }
+            &::after {
+                top: 21px;
+                left: 90px;
+                width: 20px;
+                height: 20px;
+                border-right: 1px solid #2b2b2b;
+                border-bottom: 1px solid #2b2b2b;
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    .cp-text {
+        text-align: center;
+        padding: 12px 0 12px;
+    }
