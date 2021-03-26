@@ -1,3 +1,24 @@
+// レイアウト幅
+$layout-width-canvas: 1280px;
+$layout-width-inner: 1200px;
+
+// ブレークポイント
+$breakpoints: (
+	"sp-down": "(max-width: 767px)",
+	"sp-up": "(min-width: 768px)",
+	"tab-down": "(max-width: #{$layout-width-inner - 1px})",
+	"tab-up": "(min-width: #{$layout-width-inner})",
+	"retina": "only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)",
+);
+
+// メディアクエリー
+@mixin mq($breakpoint: sp) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
+
 .concept {
     width: 100%;
     padding: 80px 0;
@@ -5,6 +26,7 @@
     &__image {
         height: 400px;
         object-fit: cover;
+        width: 100%;
     }
     .u-heading {
         position: relative;
@@ -60,12 +82,20 @@
         flex-wrap: wrap;
         align-content: space-between;
         height: 1580px;
+
+        @include mq('sp-down') {
+            display: none;
+        }
     }
     &__contents__item {
        padding-bottom: 80px;
         &:nth-of-type(3) {
             padding-top: 120px;
         }
+    }
+
+    .works-list-img img{
+        width: 100%;
     }
     .work-ttl {
         font-weight: bold;
@@ -80,9 +110,21 @@
     }
     }
 
+    .swiper-container {
+        @include mq('sp-up') {
+            display: none;
+        }
+
+        @include mq('sp-down') {
+            width: 100%;
+            height: auto;
+        }
+    }
+
     .florist {
         height: 650px;
         background: linear-gradient(#ededed 50%,#fff 50%);
+
             &-heading {
                 position: relative;
                 margin-bottom: 32px;
@@ -99,6 +141,10 @@
                     background-color: #2b2b2b;
                     transform: translateX(-50%);
                 }
+
+                @include mq('sp-down') {
+                    display: block;
+                }
             }
             &-text {
                 padding-bottom: 40px;
@@ -108,10 +154,15 @@
             .card__items {
                 display: flex;
                 flex-wrap: wrap;
+
+                @include mq('sp-down') {
+                    display: block;
+                }
               }
               .card__item:not(:nth-child(3n + 1)) {
                 width: calc(33.3% - 24px * 2 / 3);
                 margin-left: 24px;
+
               }
             .card__title {
                 font-weight: bold;
@@ -133,6 +184,11 @@
             padding-bottom: 24px;
             font-size: 36px;
             letter-spacing: 2px;
+
+            @include mq('sp-down') {
+                position: relative;
+                margin-bottom: 20px;
+            }
             &::after {
                 content: '';
                 position: absolute;
@@ -142,6 +198,10 @@
                 height: 1px;
                 background-color: #2b2b2b;
                 transform: translateX(-50%);
+
+                @include mq('sp-down') {
+                    position: absolute;
+                }
             }
         }
         &-text {
@@ -153,6 +213,10 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            @include mq('sp-down') {
+                display: block;
+            }
         }
         &__img {
             width: 50%;

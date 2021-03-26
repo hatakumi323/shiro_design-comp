@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shiro_design-comp</title>
     <link rel="stylesheet" href="./rcss/reset.css">
+    <link rel="stylesheet" href="./path/swiper.min.css">
     <link rel="stylesheet" href="./sass/style.css">
 </head>
 
@@ -59,22 +60,22 @@
                 </li>
                 <li class="works__contents__item">
                     <a href="#!">
+                        <figure class="works-list-img"><img src="./img/work_decoretion-min.png" alt=""></figure>
+                        <div class="work-ttl">Decoration</div>
+                        <p class="work-body">
+                            お写真を彩るお花を一輪から販売。一定期間のご契約で定<br>
+                            期的にご自宅へ配送させていただくことも可能です。
+                        </p>
+                    </a>
+                </li>
+                <li class="works__contents__item">
+                    <a href="#!">
                         <figure class="works-list-img"><img src="./img/work_wedding-min.png" alt=""></figure>
                         <div class="work-ttl">Wedding</div>
                         <p class="work-body">
                             ウエディングドレスに合わせたブーケや式場の雰囲気に合<br>
                             う装花をご提案。お打ち合わせの流れや回数、費用などに<br>
                             つきましてはお問い合わせください。
-                        </p>
-                    </a>
-                </li>
-                <li class="works__contents__item">
-                    <a href="#!">
-                        <figure class="works-list-img"><img src="./img/work_decoretion-min.png" alt=""></figure>
-                        <div class="work-ttl">Decoration</div>
-                        <p class="work-body">
-                            お写真を彩るお花を一輪から販売。一定期間のご契約で定<br>
-                            期的にご自宅へ配送させていただくことも可能です。
                         </p>
                     </a>
                 </li>
@@ -90,10 +91,69 @@
                     </a>
                 </li>
             </ul>
+
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                    <li class="swiper-slide">
+                        <a href="#!">
+                            <figure class="works-list-img"><img src="./img/work_gift-min.png" alt=""></figure>
+                            <div class="work-ttl">Gift</div>
+                            <p class="work-body">
+                                花束をお送りしたいお相手、伝えたいお気持ちに合わせた<br>
+                                プレゼント用花束のアレンジメントをさせていただきま<br>
+                                す。花言葉などの豆知識もお伝えします。
+                            </p>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#!">
+                            <figure class="works-list-img"><img src="./img/work_decoretion-min.png" alt=""></figure>
+                            <div class="work-ttl">Decoration</div>
+                            <p class="work-body">
+                                お写真を彩るお花を一輪から販売。一定期間のご契約で定<br>
+                                期的にご自宅へ配送させていただくことも可能です。
+                            </p>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#!">
+                            <figure class="works-list-img"><img src="./img/work_wedding-min.png" alt=""></figure>
+                            <div class="work-ttl">Wedding</div>
+                            <p class="work-body">
+                                ウエディングドレスに合わせたブーケや式場の雰囲気に合<br>
+                                う装花をご提案。お打ち合わせの流れや回数、費用などに<br>
+                                つきましてはお問い合わせください。
+                            </p>
+                        </a>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#!">
+                            <figure class="works-list-img"><img src="./img/work_for_yourself-min.png" alt=""></figure>
+                            <div class="work-ttl">For yourself</div>
+                            <p class="work-body">
+                                お部屋の雰囲気やライフスタイルをお聞きしてご自宅用の<br>
+                                花束をご提案し、少しでも長く咲かせるコツもお教えしま<br>
+                                す。花束に合った花瓶をご提案することも可能です。
+                            </p>
+                        </a>
+                    </li>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+              
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+              </div>
         </div>
     </section>
 
-    <section class="florist">
+    <!-- <section class="florist">
         <div class="container">
             <h2 class="florist-heading">Florist</h2>
             <p class="florist-text">
@@ -135,8 +195,9 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section class="shop-information">
+    </section> -->
+
+    <!-- <section class="shop-information">
         <div class="container">
             <h2 class="shop-information-heading">Shop information</h2>
             <p class="shop-information-text">
@@ -166,7 +227,8 @@
                 </table>
             </div>
         </div>
-    </section>
+    </section> -->
+    
     <section class="contact">
         <div class="container">
             <h2 class="contact-heading">Contact us</h2>
@@ -177,6 +239,7 @@
             <a href="" class="contact__btn">お問い合わせ</a>
         </div>
     </section>
+    
     <footer class="footer">
         <div class="container">
             <div class="cp-text">
@@ -184,6 +247,7 @@
             </div>
         </div>
     </footer>
+    
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="./js/swiper.min.js"></script>
