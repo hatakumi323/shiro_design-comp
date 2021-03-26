@@ -172,6 +172,7 @@
   .florist .card__item:not(:nth-child(3n + 1)) {
     width: auto;
     padding-top: 40px;
+    margin-left: 0;
   }
 }
 
