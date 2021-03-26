@@ -143,11 +143,11 @@ section {
   .swiper-container {
     width: 100%;
     height: auto;
+    align-items: center;
   }
 }
 
 .florist {
-  height: 650px;
   background: linear-gradient(#ededed 50%, #fff 50%);
 }
 
@@ -198,6 +198,13 @@ section {
   margin-left: 24px;
 }
 
+@media (max-width: 767px) {
+  .florist .card__item:not(:nth-child(3n + 1)) {
+    width: auto;
+    padding-top: 40px;
+  }
+}
+
 .florist .card__title {
   font-weight: bold;
   text-align: left;
@@ -205,19 +212,27 @@ section {
   font-size: 24px;
 }
 
+@media (max-width: 767px) {
+  .florist .card__title {
+    text-align: center;
+  }
+}
+
 .florist .introductory {
   text-align: left;
   letter-spacing: 3px;
 }
 
-.shop-information {
-  padding: 80px 0 120px;
+@media (max-width: 767px) {
+  .florist .introductory {
+    text-align: center;
+  }
 }
 
 .shop-information-heading {
   position: relative;
   margin-bottom: 32px;
-  padding-bottom: 24px;
+  padding: 80px 0 24px;
   font-size: 36px;
   letter-spacing: 2px;
 }
@@ -261,11 +276,22 @@ section {
 @media (max-width: 767px) {
   .shop-information__grid {
     display: block;
+    padding-bottom: 60px;
   }
 }
 
-.shop-information__img {
-  width: 50%;
+@media (min-width: 768px) {
+  .shop-information__img {
+    width: 50%;
+    padding-bottom: 120px;
+  }
+}
+
+@media (max-width: 767px) {
+  .shop-information__img {
+    width: 100%;
+    padding-bottom: 60px;
+  }
 }
 
 .shop-information__table {
@@ -274,6 +300,12 @@ section {
   text-align: left;
   letter-spacing: 1.5px;
   line-height: 2;
+}
+
+@media (max-width: 767px) {
+  .shop-information__table {
+    width: 100%;
+  }
 }
 
 .shop-information__table__heading {
@@ -287,6 +319,12 @@ section {
 
 .shop-information th, .shop-information td {
   font-weight: normal;
+}
+
+@media (max-width: 767px) {
+  .shop-information th, .shop-information td {
+    text-align: center;
+  }
 }
 
 .contact {
@@ -331,6 +369,12 @@ section {
   border: 1px solid #a0a0a0;
   background: #fff;
   font-size: 20px;
+}
+
+@media (max-width: 767px) {
+  .contact__btn {
+    width: 100%;
+  }
 }
 
 .contact__btn:before, .contact__btn::after {

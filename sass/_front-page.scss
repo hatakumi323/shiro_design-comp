@@ -118,11 +118,11 @@ $breakpoints: (
         @include mq('sp-down') {
             width: 100%;
             height: auto;
+            align-items: center;
         }
     }
 
     .florist {
-        height: 650px;
         background: linear-gradient(#ededed 50%,#fff 50%);
 
             &-heading {
@@ -163,25 +163,37 @@ $breakpoints: (
                 width: calc(33.3% - 24px * 2 / 3);
                 margin-left: 24px;
 
+                @include mq('sp-down') {
+                    width: auto;
+                    padding-top: 40px;
+                }
+
               }
             .card__title {
                 font-weight: bold;
                 text-align: left;
                 padding: 12px 0 4px;
                 font-size: 24px;
+
+                @include mq('sp-down') {
+                    text-align: center;
+                }
             }
             .introductory {
                 text-align: left;
                 letter-spacing: 3px;
+
+                @include mq('sp-down') {
+                    text-align: center;
+                }
             }
     }
 
     .shop-information {
-        padding: 80px 0 120px;
         &-heading {
             position: relative;
             margin-bottom: 32px;
-            padding-bottom: 24px;
+            padding: 80px 0 24px;
             font-size: 36px;
             letter-spacing: 2px;
 
@@ -216,10 +228,19 @@ $breakpoints: (
 
             @include mq('sp-down') {
                 display: block;
+                padding-bottom: 60px;
             }
         }
         &__img {
-            width: 50%;
+            
+            @include mq('sp-up') {
+                width: 50%;
+                padding-bottom: 120px;
+            }
+            @include mq('sp-down') {
+                width: 100%;
+                padding-bottom: 60px;
+            }
         }
         &__table {
             width: 45%;
@@ -227,6 +248,10 @@ $breakpoints: (
             text-align: left;
             letter-spacing: 1.5px;
             line-height: 2;
+
+            @include mq('sp-down') {
+                width: 100%;
+            }
             &__heading {
                 border-right: 1px solid #a0a0a0;
                 width: 25%;
@@ -237,6 +262,10 @@ $breakpoints: (
         }
         th ,td {
             font-weight: normal;
+
+            @include mq('sp-down') {
+                text-align: center;
+            }
         }
     }
 
@@ -277,6 +306,10 @@ $breakpoints: (
             border: 1px solid #a0a0a0;
             background: #fff;
             font-size: 20px;
+
+            @include mq('sp-down') {
+                width: 100%;
+            }
             &:before,
             &::after {
               content: '';
