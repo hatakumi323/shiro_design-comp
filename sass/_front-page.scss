@@ -18,6 +18,61 @@ $breakpoints: (
 	}
 }
 
+.about {
+    height: 648px;
+    background-image: url(../img/header-min.png);
+    background-size: cover;
+    @include mq('sp-up') {
+        background-position: center center;
+    }
+
+    @include mq('sp-down') {
+		height: 668px;
+	}
+
+    &__inner {
+        max-width: 1240px;
+    }
+    &__text {
+        padding-top: 230px;
+        
+        @include mq('sp-down') {
+            margin-left: auto;
+            max-width: 600px;
+        }
+    }
+    &__ttl {
+        font-weight: normal;
+        font-size: 120px;
+        color: #fff;
+        line-height: 1.5;
+        margin-bottom: 40px;
+
+        @include mq('sp-down') {
+            font-size: 24px;
+            margin-bottom: 14px;
+        }
+    }
+    &__body {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #fff;
+        padding-bottom: 40px;
+
+        &::before,
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 2px;
+            margin: 0 8px;
+            background: #fff;
+            vertical-align: middle;
+        }
+    }
+}
+
 
 .concept {
     width: 100%;
@@ -223,9 +278,13 @@ $breakpoints: (
             letter-spacing: 1.4px;
         }
         &__grid {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            
+            @include mq('sp-up') {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-bottom: 120px;
+            }
 
             @include mq('sp-down') {
                 display: block;
@@ -234,10 +293,6 @@ $breakpoints: (
         }
         &__img {
             
-            @include mq('sp-up') {
-                width: 50%;
-                padding-bottom: 120px;
-            }
             @include mq('sp-down') {
                 width: 100%;
                 padding-bottom: 60px;
@@ -249,24 +304,30 @@ $breakpoints: (
             text-align: left;
             letter-spacing: 1.5px;
             line-height: 2;
-
+            
             @include mq('sp-down') {
                 width: 100%;
             }
             &__heading {
                 border-right: 1px solid #a0a0a0;
-                width: 25%;
             }
         }
         tbody {
             vertical-align: inherit;
         }
 
+        tr {
+            margin: 5px 0;
+        }
+        
         th ,td {
             font-weight: normal;
+            padding-left: 20px;
+            padding-bottom: 5px;
 
             @include mq('sp-down') {
                 text-align: center;
+                padding-left: 8px;
             }
         }
     }

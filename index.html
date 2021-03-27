@@ -13,14 +13,25 @@
 
 <body>
     <header class="header">
-        <div class="header__nav">
-          <div class="container header__nav__wrapper">
-            <div class="header__nav__logo">Shiro</div>
-            <div class="hamburger-menu">
-              <span class="hamburger-menu__line"></span>
+        <nav class="header-nav">
+            <div class="drawer">
+             <h1><a class="navbar_brand" href="#">Shiro</a></h1>
+             <div class="navbar_toggle">
+              <span class="navbar_toggle_icon"></span>
+              <span class="navbar_toggle_icon"></span>
+              <span class="navbar_toggle_icon"></span>
+             </div>
             </div>
-          </div>
-        </div>
+            <div class="menu">
+                <ul class="header-menu height-change">
+                    <li class="header__menu__item"><a href="#">Concept</a></li>
+                    <li class="header__menu__item"><a href="#">Work</a></li>
+                    <li class="header__menu__item"><a href="#">Florist</a></li>
+                    <li class="header__menu__item"><a href="#">Shop information</a></li>
+                    <li class="header__menu__item"><a href="#">Contact us</a></li>
+                  </ul>
+            </div>
+           </nav>
         <div class="u-content-wrapper">
             <h1 class="header__title">Shiro</h1>
             <p class="header__title__sub">White flower shop</p>
@@ -253,14 +264,13 @@
     <script src="./js/swiper.min.js"></script>
     <script src="./js/script.js"></script>
     <script>
-        // ドロワー
-        jQuery(".js-drawer").on("click", function (e) {
-            e.preventDefault();
-            let targetClass = jQuery(this).attr("data-target");
-            jQuery("." + targetClass).toggleClass("is-checked");
-            return false;
+        $(function() {
+         $('.navbar_toggle').on('click', function () {
+          $(this).toggleClass('open');
+          $('.menu').toggleClass('open');
+         });
         });
-    </script>
+        </script>
 </body>
 
 </html>

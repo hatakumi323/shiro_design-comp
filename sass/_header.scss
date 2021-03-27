@@ -1,71 +1,115 @@
 .header {
-    position: relative;
     width: 100%;
     height: 620px;
     background-image: url(../img/header-min.png);
     background-size: cover;
     text-align: center;
-    color: #fff;
-    &__nav {
-        position: absolute;
-        top: 40px;
-        left: 0;
+
+    &-nav{
         width: 100%;
         height: 64px;
-    }
-    &__nav__wrapper {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    &__nav__logo {
-        font-size: 36px;
-    }
-    .hamburger-menu {
         position: relative;
-        width: 32px;
-        height: 64px;
-        cursor: pointer;
-        &__line,
-        &__line::before,
-        &__line::after {
-            position: absolute;
-            left: 0;
-            display: block;
-            width: 32px;
-            height: 1px;
-            background-color: #fff;
-        }
-        &__line::before,
-        &__line::after {
-            content: '';
-        }
-        &__line {
-            top: 50%;
-        }
-        &__line::before {
-            top: calc(50% - 8px);
-        }
-        &__line::after {
-            top: calc(50% + 8px);
-        }
-      }
-      &__title {
-          padding-top: 240px;
-          font-size: 120px;
-          font-weight: normal;
-      }
-      &__title__sub {
-          word-spacing: 4px;
-          &::before,
-          &::after {
-            content: '';
-            display: inline-block;
-            width: 12px;
-            height: 2px;
-            margin: 0 8px;
-            background: #fff;
-            vertical-align: middle;
-          }
-      }
+        position: fixed;
+       }
+       
+       .drawer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        height: 70px;
+        padding: 0 1em;
+       }
+
+       .navbar_brand {
+           color: #fff;
+           font-size: 36px;
+       }
+
+       .navbar_toggle{
+        z-index:9999;
+       }
+       
+       .navbar_toggle_icon {
+        position: relative;
+        display: block;
+        height: 2px;
+        width: 30px;
+        background: #fff;
+        -webkit-transition: ease .5s;
+        transition: ease .5s;
+       }
+       
+       .navbar_toggle_icon:nth-child(1) {
+        top: 0;
+       }
+       
+       .navbar_toggle_icon:nth-child(2) {
+        margin: 8px 0;
+       }
+       
+       .navbar_toggle_icon:nth-child(3) {
+        top: 0;
+       }
+       /*OPEN時の動き*/
+       .navbar_toggle.open .navbar_toggle_icon:nth-child(1) {
+        top: 10px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+       }
+       
+       .navbar_toggle.open .navbar_toggle_icon:nth-child(2) {
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        opacity: 0;
+       }
+       
+       .navbar_toggle.open .navbar_toggle_icon:nth-child(3) {
+        top: -10px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+       }
+
+       .menu{
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        -webkit-transition:ease .5s;
+        transition:ease .5s;
+        z-index:1000;
+       }
+       
+       .menu ul li{
+        padding: .8rem;
+        border-bottom: 1px solid #CCC;
+        background: rgba(255, 255, 255, .9);
+       }
+       /*OPEN時の動き*/
+       .menu.open {
+        -webkit-transform:translateX(0);
+        transform:translateX(0);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+       }
+
+       &__title {
+           font-size: 120px;
+           padding-top: 240px;
+           color: #fff;
+
+           &__sub {
+               color: #fff;
+               &::before,
+               &::after {
+                content: '';
+                display: inline-block;
+                width: 12px;
+                height: 2px;
+                margin: 0 8px;
+                background: #fff;
+                vertical-align: middle;
+               }
+           }
+       }
 }
+
