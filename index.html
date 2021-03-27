@@ -13,25 +13,33 @@
 
 <body>
     <header id="header" class="header">
-        <nav class="header-nav">
-            <div class="drawer">
-             <h1><a class="navbar_brand" href="#">Shiro</a></h1>
-             <div class="navbar_toggle">
-              <span class="navbar_toggle_icon"></span>
-              <span class="navbar_toggle_icon"></span>
-              <span class="navbar_toggle_icon"></span>
-             </div>
+        <div class="header__wrap">
+
+            <div class="contents">
+                <h1>Shiro</h1>
             </div>
-            <div class="menu">
-                <ul class="header-menu height-change">
-                    <li class="header__menu__item"><a href="#">Concept</a></li>
-                    <li class="header__menu__item"><a href="#">Work</a></li>
-                    <li class="header__menu__item"><a href="#">Florist</a></li>
-                    <li class="header__menu__item"><a href="#">Shop information</a></li>
-                    <li class="header__menu__item"><a href="#">Contact us</a></li>
-                  </ul>
+            <div class="cp_fullscreenmenu">
+            <input type="checkbox" id="menuToggle" />
+            
+            <label for="menuToggle" class="hamburger">
+            <div class="open"></div>
+            </label>
+            
+            <div class="menu menuEffects">
+            <label for="menuToggle"></label>
+            <div class="menucont">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Concept</a></li>
+                    <li><a href="#">Works</a></li>
+                    <li><a href="#">Florist</a></li>
+                    <li><a href="#">Shop information</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
             </div>
-           </nav>
+            </div>
+            </div>
+        </div>
         <div class="u-content-wrapper">
             <h1 class="header__title">Shiro</h1>
             <p class="header__title__sub">White flower shop</p>
