@@ -500,7 +500,7 @@ section {
   justify-content: space-between;
   position: relative;
   height: 70px;
-  padding: 0 1em;
+  padding: 0 160px;
 }
 
 .header .navbar_brand {
@@ -558,6 +558,7 @@ section {
   padding: .8rem;
   border-bottom: 1px solid #CCC;
   background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
 }
 
 .header .menu.open {
@@ -584,5 +585,9 @@ section {
   margin: 0 8px;
   background: #fff;
   vertical-align: middle;
+}
+
+.header--unpinned {
+  transform: translateY(-150%);
 }
 /*# sourceMappingURL=style.css.map */

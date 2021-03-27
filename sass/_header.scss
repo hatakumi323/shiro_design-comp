@@ -19,7 +19,7 @@
         justify-content: space-between;
         position: relative;
         height: 70px;
-        padding: 0 1em;
+        padding: 0 160px;
        }
 
        .navbar_brand {
@@ -83,6 +83,7 @@
         padding: .8rem;
         border-bottom: 1px solid #CCC;
         background: rgba(255, 255, 255, .9);
+        backdrop-filter: blur(12px);
        }
        /*OPEN時の動き*/
        .menu.open {
@@ -112,4 +113,9 @@
            }
        }
 }
+
+.header--unpinned {
+    -webkit-transform: translateY(-150%);
+    transform: translateY(-150%);
+  }
 
